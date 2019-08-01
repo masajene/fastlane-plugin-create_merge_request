@@ -1,0 +1,16 @@
+before_all do
+  ENV["GITLAB_TOKEN"] = "xaezGLpoAx8krMuYV9yt"
+end
+
+lane :test do
+  create_merge_request(
+    api_token: ENV["GITLAB_TOKEN"],
+    project_id: "13501798",
+    title: "WIP: Fastlane Plugin Test",
+    body: "MRのfastlane pluginのテストです",
+    source: "develop",
+    target: "master",
+    assignee_id: "1773700",
+    labels: "bot"
+  )
+end
