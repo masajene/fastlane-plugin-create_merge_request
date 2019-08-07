@@ -7,7 +7,7 @@
 
 This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin. 
 
-This will create a new pull request on GitLab.
+This will create a new merge request on GitLab.
 
 ## Getting Started
 
@@ -28,7 +28,7 @@ create_merge_request(
     project_id: "1000",                 # Gitlab Project ID
     title: "Amazing new feature",
     body: "Please pull this in!",       # optional
-    source: "branch_name",                # optional Name of the branch where your changes are implemented (defaults to the current branch name)
+    source: "branch_name",              # optional Name of the branch where your changes are implemented (defaults to the current branch name)
     target: "develop",                  # optional Name of the branch you want your changes pulled into (defaults to `master`)
     assignee_id: "1773700",             # optional Assignee user ID
     labels: "bot",                      # optional Labels for MR as a comma-separated list

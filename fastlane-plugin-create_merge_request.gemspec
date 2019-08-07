@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.author        = 'masashi mizuno'
   spec.email         = 'masajene8@gmail.com'
 
-  spec.summary       = 'GitLab Marge Request'
+  spec.summary       = 'This will create a new merge request on GitLab.'
   spec.homepage      = "https://github.com/masajene/fastlane-plugin-create_merge_request"
   spec.license       = "MIT"
 
