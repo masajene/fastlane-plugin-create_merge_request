@@ -1,4 +1,4 @@
-# create_merge_request plugin
+# create_merge_request `fastlane` plugin
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-create_merge_request)
 
@@ -12,27 +12,26 @@ fastlane add_plugin create_merge_request
 
 ## About create_merge_request
 
-GitLab Marge Request
+GitLab Marge Request Plugin for fastlane
 
-**Note to author:** Add a more detailed description about this plugin here. If your plugin contains multiple actions, make sure to mention them here.
+This will create a new pull request on GitHub
 
 ## Example
 
-Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins` and `bundle exec fastlane test`.
+Check out the [example `Fastfile`](fastlane/Fastfile) to see how to use this plugin. Try it by cloning the repo, running `fastlane install_plugins`.
 
-**Note to author:** Please set up a sample project to make it easy for users to explore what your plugin does. Provide everything that is necessary to try out the plugin in this project (including a sample Xcode/Android project if necessary)
-
-## Run tests for this plugin
-
-To run both the tests, and code style validation, run
-
-```
-rake
-```
-
-To automatically fix many of the styling issues, use
-```
-rubocop -a
+```ruby
+create_merge_request(
+    api_token: "secret",
+    project_id: "1000",                 # Gitlab Project ID
+    title: "Amazing new feature",
+    body: "Please pull this in!",       # optional
+    source: "branch_name",                # optional Name of the branch where your changes are implemented (defaults to the current branch name)
+    target: "develop",                  # optional Name of the branch you want your changes pulled into (defaults to `master`)
+    assignee_id: "1773700",             # optional Assignee user ID
+    labels: "bot",                      # optional Labels for MR as a comma-separated list
+    api_url: "http://yourdomain/api/v4" # optional, for GitLab self-host, defaults to "https://gitlab.com/api/v4"
+  )
 ```
 
 ## Issues and Feedback
