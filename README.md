@@ -2,19 +2,21 @@
 
 [![fastlane Plugin Badge](https://rawcdn.githack.com/fastlane/fastlane/master/fastlane/assets/plugin-badge.svg)](https://rubygems.org/gems/fastlane-plugin-create_merge_request)
 
+
+## About create_merge_request
+
+This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin. 
+
+This will create a new pull request on GitLab.
+
 ## Getting Started
 
-This project is a [_fastlane_](https://github.com/fastlane/fastlane) plugin. To get started with `fastlane-plugin-create_merge_request`, add it to your project by running:
+To get started with `fastlane-plugin-create_merge_request`, add it to your project by running:
 
 ```bash
 fastlane add_plugin create_merge_request
 ```
 
-## About create_merge_request
-
-GitLab Marge Request Plugin for fastlane
-
-This will create a new pull request on GitHub
 
 ## Example
 
