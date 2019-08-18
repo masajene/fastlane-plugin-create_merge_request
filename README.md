@@ -32,6 +32,7 @@ create_merge_request(
     target: "develop",                  # optional Name of the branch you want your changes pulled into (defaults to `master`)
     assignee_id: "1773700",             # optional Assignee user ID
     labels: "bot",                      # optional Labels for MR as a comma-separated list
+    milestone_id: "1",                  # optional The global ID of a milestone
     api_url: "http://yourdomain/api/v4" # optional, for GitLab self-host, defaults to "https://gitlab.com/api/v4"
   )
 ```
