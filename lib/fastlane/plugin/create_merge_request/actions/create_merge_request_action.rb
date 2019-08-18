@@ -27,6 +27,7 @@ module Fastlane
           'target_branch' => params[:target],
           'assignee_id' => params[:assignee_id],
           'labels' => params[:labels],
+          'milestone_id' => params[:milestone_id],
           'target_project_id' => target_project_id,
         }
         payload['description'] = params[:body] if params[:body]
@@ -112,6 +113,12 @@ module Fastlane
                                         description: "Labels for MR as a comma-separated list",
                                         is_string: false,
                                         default_value: '',
+                                        optional: true),
+          FastlaneCore::ConfigItem.new(key: :milestone_id,
+                                        env_name: "GITLAB_MERGE_REQUEST_MILESTONE_ID",
+                                        description: "The global ID of a milestone",
+                                        is_string: false,
+                                        default_value: '0',
                                         optional: true),
           FastlaneCore::ConfigItem.new(key: :api_url,
                                        env_name: "GITLAB_MERGE_REQUEST_API_URL",

@@ -11,6 +11,7 @@ lane :test do
     source: "develop",
     target: "master",
     assignee_id: "0",
-    labels: "bot"
+    labels: "bot",
+    milestone_id: "1",
   )
 end
